@@ -26,24 +26,24 @@ SELECT tag as tag,isnull(cast(nullif(value, 0) as varchar(10)),'')as value, time
 	end) as Alarm_Setpoint,
 	
 	(Select case
-		when CHARINDEX('Go.KE', tag) = 1 then 'Kern'
-		when CHARINDEX('Go.DI', tag) = 1 then 'Diablo'
-		when CHARINDEX('Go.DA', tag) = 1 then 'De Anza'
-		when CHARINDEX('Go.SI', tag) = 1 then 'Sierra'
-		when CHARINDEX('Go.EB', tag) = 1 then 'Oakland'
-		when CHARINDEX('Go.SJ', tag) = 1 then 'San Jose'
-		when CHARINDEX('Go.ST', tag) = 1 then 'Stockton'
-		when CHARINDEX('Go.SO', tag) = 1 then 'Sonoma'
-		when CHARINDEX('GO.NV', tag) = 1 then 'North Valley'
-		when CHARINDEX('GO.SF', tag) = 1 then 'San Francisco'
-		when CHARINDEX('Go.HU', tag) = 1 then 'Humboldt'
-		when CHARINDEX('GO.SA', tag) = 1 then 'Sacramento'
-		when CHARINDEX('GO.MI', tag) = 1 then 'Mission'
-		when CHARINDEX('GO.PN', tag) = 1 then 'Pennisula'
-		when CHARINDEX('GO.NB', tag) = 1 then 'North Bay'
-		when CHARINDEX('GO.FR', tag) = 1 then 'Fresno'
-		when CHARINDEX('GO.CC', tag) = 1 then 'Central Coast'
-		when CHARINDEX('GO.YO', tag) = 1 then 'Yosemite'
+		when CHARINDEX('Go.KE', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.DI', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.DA', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.SI', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.EB', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.SJ', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.ST', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.SO', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.NV', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.SF', tag) = 1 then 'xxxxx'
+		when CHARINDEX('Go.HU', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.SA', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.MI', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.PN', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.NB', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.FR', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.CC', tag) = 1 then 'xxxxx'
+		when CHARINDEX('GO.YO', tag) = 1 then 'xxxxx'
 	end) as Division,	
 		
 	(Select case 	
@@ -66,16 +66,13 @@ SELECT tag as tag,isnull(cast(nullif(value, 0) as varchar(10)),'')as value, time
 
 
 
-FROM PIUDNAPPDEV03.piarchive..picomp
+FROM xxxxxxxxxxxxxxxxxxxxxxxxx
 where 
 
 
 		( 
-		Tag='GO.EBOAKIEB5_BATT_VOLT'
-or Tag='GO.CCMONI006_BATT_VOLT'
-or Tag='GO.CCMONI007_BATT_VOLT'
-or Tag='GO.CCSALI008_BATT_VOLT'
-or Tag='GO.DIMTZI001_BATT_VOLT'
+		Tag=xxxxxxxx
+
 		)
 	and time > DateAdd(M,-6,GetDate());
 	
